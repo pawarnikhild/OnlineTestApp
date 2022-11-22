@@ -88,7 +88,7 @@ const Question5Screen = () => {
   };
 
   const submitTest = () => {
-    Alert.alert('Alert Title', 'Do you want to submit test ?', [
+    Alert.alert('Confirm', 'Do you want to submit test ?', [
       {
         text: 'Cancel',
         onPress: () => console.log('Test submission canceled !'),

@@ -26,9 +26,7 @@ const Question3ScreenView = (props: Question3ScreenViewProps) => {
   return (
     <SafeAreaView style={GlobleStyles.appContainer}>
       <StatusBar/>
-      <CustomNavigationButtons
-        style={{marginTop: 10}}
-      />
+      <CustomNavigationButtons />
       <Text style={GlobleStyles.questionText}>{question.title}</Text>
       <CustomTextInput
         style={GlobleStyles.customTextInput}
