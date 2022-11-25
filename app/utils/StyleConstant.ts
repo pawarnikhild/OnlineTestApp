@@ -4,7 +4,6 @@ export const AppColor = {
     black: '#000000',
     red: '#ff0000',
     grey: '#808080',
-    Yellow: '#b3b300',
     darkBlue: '#0059b3',
     pieGreen: '#44CD40',
     pieRed: '#F44336'

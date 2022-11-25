@@ -29,7 +29,6 @@ export default CustomTextInput
 
 const styles = StyleSheet.create({
     CustomTextInput: {
-      // height: 40,
         padding: 6,
         backgroundColor: AppColor.white,
         borderWidth: 2,

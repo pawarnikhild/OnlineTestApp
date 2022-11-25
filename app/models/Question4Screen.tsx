@@ -17,13 +17,13 @@ const Question4Screen = () => {
     { id: 4, text: language.questions[3].options[3] },
   ]);
 
-  // type answerZonesType = {[
+  // type answerZonesType = [
   //   {
   //     id: number,
   //     text: string,
   //     items: [{id: number, text: string}]
   //   }
-  // ]}
+  // ]
 
   const [answerZones, setAnswerZones] = useState([
     {
@@ -49,12 +49,6 @@ const Question4Screen = () => {
     },
   ]);
 
-  // console.log('options',options)
-  // console.log('answerZones', answerZones)
-  // console.log('Items',answerZones[0].items)
-  // console.log('Q4 selectedAnswer',selectedAnswer)
-  // console.log('Q4 selectedAnswer type', typeof selectedAnswer)
-
   const showNoVehicleNoToast = () => {
     ToastAndroid.show("Answer submitted successfully !", ToastAndroid.SHORT);
   };
@@ -70,6 +64,7 @@ const Question4Screen = () => {
       // dispatch(answerQuestion({ questionId:3, answer: JSON.stringify(answerZones), answered: true}))
     }
   };
+
   const submitAnswer = () => {
     if (
       answerZones[0].items.length < 1 ||

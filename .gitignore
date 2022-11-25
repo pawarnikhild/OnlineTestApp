@@ -64,4 +64,6 @@ buck-out/
 /vendor/bundle/
 
 # Aple ignore
+.gitignore
 ZProjectInfo/
+experiment/

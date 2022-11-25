@@ -1,9 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import { PayloadAction } from "@reduxjs/toolkit";
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 import type { rootState } from '../store'
-
 
 type initialStateType = {
     name: string
@@ -28,7 +26,7 @@ export const userSlice = createSlice({
             state.email = action.payload.email
             state.phoneNo = action.payload.phoneNo
             state.preferedLanguage = action.payload.preferedLanguage
-            console.log('initialState in userReducer',state)
+            console.log('InitialState in userReducer',state)
         }
 
     }

@@ -68,7 +68,7 @@ const Question5ScreenView = (props: any) => {
       <StatusBar />
       <CustomNavigationButtons style={{marginTop: 10}} />
       <Text style={GlobleStyles.questionText}>{question.title}</Text>
-      <View style={GlobleStyles.checkBoxView}>
+      <View style={Question5ScreenStyle.checkBoxView}>
         <CheckBox
           value={checked}
           onValueChange={() => {
@@ -76,15 +76,16 @@ const Question5ScreenView = (props: any) => {
             // handleCheckBoxPress();
           }}
         />
-        <Text style={GlobleStyles.checkBoxText}>{question.options[0]}</Text>
+        <Text style={Question5ScreenStyle.checkBoxText}>{question.options[0]}</Text>
       </View>
-      <View style={GlobleStyles.checkBoxView}>
+      <View style={Question5ScreenStyle.checkBoxView}>
         <CheckBox
           value={checked1}
           onValueChange={(value) => {
             setChecked1(!checked1);
             // setChecked1(value);
             // console.log('value in checkbox2',value)
+            // console.log('checked!',checked1)
             // console.log('checkBoxState.check1',checkBoxState.check1)
             // checkBoxState.check1 = value;
             // let localObject = {...checkBoxState, ...{check1: value}}
@@ -94,9 +95,9 @@ const Question5ScreenView = (props: any) => {
             // handleCheckBoxPress();
           }}
         />
-        <Text style={GlobleStyles.checkBoxText}>{question.options[1]}</Text>
+        <Text style={Question5ScreenStyle.checkBoxText}>{question.options[1]}</Text>
       </View>
-      <View style={GlobleStyles.checkBoxView}>
+      <View style={Question5ScreenStyle.checkBoxView}>
         <CheckBox
           value={checked2}
           // value={checkBoxState.check2}
@@ -106,9 +107,9 @@ const Question5ScreenView = (props: any) => {
             // handleCheckBoxState(2, value)
           }}
         />
-        <Text style={GlobleStyles.checkBoxText}>{question.options[2]}</Text>
+        <Text style={Question5ScreenStyle.checkBoxText}>{question.options[2]}</Text>
       </View>
-      <View style={GlobleStyles.checkBoxView}>
+      <View style={Question5ScreenStyle.checkBoxView}>
         <CheckBox
           value={checked3}
           onValueChange={() => {
@@ -116,21 +117,19 @@ const Question5ScreenView = (props: any) => {
             // handleCheckBoxPress();
           }}
         />
-        <Text style={GlobleStyles.checkBoxText}>{question.options[3]}</Text>
+        <Text style={Question5ScreenStyle.checkBoxText}>{question.options[3]}</Text>
       </View>
 
       <View style={Question5ScreenStyle.bottomContainer}>
         <CustomButton
           title="SUBMIT ANSWER"
-          // color={AppColor.buttonColor}
-          // style={Question5ScreenStyle.submitAnswerButton}
           onPress={submitAnswer}
         />
       
         <CustomButton
           title="SUBMIT TEST"
           color={AppColor.darkBlue}
-          textColor={AppColor.white}
+          // textColor={AppColor.white}
           style={Question5ScreenStyle.submitTestButton}
           onPress={submitTest}
         />
@@ -140,8 +139,6 @@ const Question5ScreenView = (props: any) => {
 };
 
 export default Question5ScreenView;
-
-const styles = StyleSheet.create({});
 
 
 
@@ -275,5 +272,3 @@ const styles = StyleSheet.create({});
 // };
 
 // export default Question5ScreenView;
-
-// const styles = StyleSheet.create({});

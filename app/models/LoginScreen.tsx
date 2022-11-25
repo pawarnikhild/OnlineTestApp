@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
-import { View, Text } from 'react-native'
-import { useNavigation, useIsFocused } from '@react-navigation/native'
-import { StackNavigationProp } from '@react-navigation/stack'
+import React, { useState } from 'react';
+import { useNavigation, useIsFocused } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 
-import { StackNavigationParamList } from '../routes/StackNavigation'
-import { useAppSelector, useAppDispatch } from '../reduxToolKit/hooks'
-import { addUser } from '../reduxToolKit/slices/userSlice'
-import { selectLanguage } from '../reduxToolKit/slices/questionsSlice'
-import { allQuestions } from '../data/allQuestions'
+import { StackNavigationParamList } from '../routes/StackNavigation';
+import { useAppDispatch } from '../reduxToolKit/hooks';
+import { addUser } from '../reduxToolKit/slices/userSlice';
+import { selectLanguage } from '../reduxToolKit/slices/questionsSlice';
+import { data } from '../data/data';
 
-import LoginScreenView from '../views/LoginScreenView'
+import LoginScreenView from '../views/LoginScreenView';
 
 const LoginScreen = () => {
   const navigation = useNavigation<StackNavigationProp<StackNavigationParamList, 'Login'>>();
@@ -24,29 +23,29 @@ const LoginScreen = () => {
     setEmail('');
     setPhoneNo('');
     setPreferedLanguage('');
-  }
+  };
 
   const handleButtonPress = () => {
-    if( name && email && phoneNo && preferedLanguage ) {
-      dispatch(addUser({
-        name:name,
-        email: email,
-        phoneNo: phoneNo,
-        preferedLanguage: preferedLanguage
-      }));
-      // let language = allQuestions.filter(obj => obj.language === preferedLanguage )
-      let language = allQuestions.find(obj => obj.language === preferedLanguage )
-      // console.log('Selected lng',language)
-      dispatch(selectLanguage(language))
+    if (name && email && phoneNo && preferedLanguage) {
+      dispatch(
+        addUser({
+          name: name,
+          email: email,
+          phoneNo: phoneNo,
+          preferedLanguage: preferedLanguage,
+        }),
+      );
+      let language = data.find(obj => obj.language === preferedLanguage);
+      dispatch(selectLanguage(language));
       navigation.navigate('Question1');
       clearState();
     } else {
-      alert('You have not entered all information !')
+      alert('You have not entered all information !');
     }
-    
-  }
+  };
+
   // console.log(preferedLanguage)
-  
+
   return (
     <LoginScreenView
       preferedLanguage={preferedLanguage}
@@ -60,7 +59,7 @@ const LoginScreen = () => {
       setPreferedLanguage={setPreferedLanguage}
       handleButtonPress={handleButtonPress}
     />
-  )
-}
+  );
+};
 
-export default LoginScreen
+export default LoginScreen;

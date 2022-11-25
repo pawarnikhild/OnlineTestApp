@@ -6,6 +6,7 @@ import CustomTextInput from '../components/CustomTextInput'
 
 import GlobleStyles from '../utils/GlobleStyles'
 import { AppColor } from '../utils/StyleConstant'
+import Question3ScreenStyle from '../styles/Question3ScreenStyle'
 
 type Question3ScreenViewProps = {
   question: {
@@ -29,7 +30,7 @@ const Question3ScreenView = (props: Question3ScreenViewProps) => {
       <CustomNavigationButtons />
       <Text style={GlobleStyles.questionText}>{question.title}</Text>
       <CustomTextInput
-        style={GlobleStyles.customTextInput}
+        style={Question3ScreenStyle.customTextInput}
         placeholder="Enter your answer here"
         placeholderColor={AppColor.grey}
         value={selectedAnswer}

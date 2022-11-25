@@ -12,8 +12,7 @@ import {calculateResult} from '../reduxToolKit/slices/resultSlice';
 import Question5ScreenView from '../views/Question5ScreenView';
 
 const Question5Screen = () => {
-  const navigation =
-    useNavigation<StackNavigationProp<StackNavigationParamList>>();
+  const navigation = useNavigation<StackNavigationProp<StackNavigationParamList>>();
   const language = useAppSelector(state => state.question);
   const selectedAnswer = language.questions[4].answerGiven;
   const dispatch = useAppDispatch();
@@ -105,6 +104,7 @@ const Question5Screen = () => {
   };
   // console.log('selectedAnswer', selectedAnswer)
   // console.log('checkBoxState in Q5',checkBoxState)
+  // console.log('checked1', checked1)
 
   return (
     <Question5ScreenView

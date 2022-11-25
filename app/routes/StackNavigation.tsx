@@ -2,7 +2,6 @@ import React from 'react'
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-// import LoginScreen from '../models/LoginScreen';
 import LoginScreen from '../models/LoginScreen';
 import Question1Screen from '../models/Question1Screen';
 import Question2Screen from '../models/Question2Screen';
@@ -10,7 +9,6 @@ import Question3Screen from '../models/Question3Screen';
 import Question4Screen from '../models/Question4Screen';
 import Question5Screen from '../models/Question5Screen';
 import ResultScreen from '../models/ResultScreen';
-import TabNavigation from './TabNavigation';
 
 const Stack = createStackNavigator<StackNavigationParamList>();
 
@@ -22,12 +20,6 @@ export type StackNavigationParamList = {
   Question4: undefined;
   Question5: undefined;
   Result: undefined;
-  // Billing: { item: {
-  //   id: number;
-  //   vehicleNo: any;
-  //   timeSpent: any;
-  //   parkingCharge: any;
-  // }};
 };
 
 const StackNavigation = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StatusBar, StyleSheet, Text, View, Button} from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 import DragAndDrop from 'volkeno-react-native-drag-drop';
 
 import CustomNavigationButtons from '../components/CustomNavigationButtons';
@@ -7,16 +7,15 @@ import CustomButton from '../components/CustomButton';
 
 import GlobleStyles from '../utils/GlobleStyles';
 import Question4ScreenStyle from '../styles/Question4ScreenStyle';
-import DragDrop from '../experiment/DragDrop';
 
 type Question4ScreenViewProps = {
   question: {
-      id: number,
-      title: string,
-      options: string[],
-      answer: string
-      answered: false,
-      answerGiven: string
+    id: number,
+    title: string,
+    options: string[],
+    answer: string
+    answered: false,
+    answerGiven: string
   },
   options: []
   answerZones: []
@@ -44,8 +43,7 @@ const Question4ScreenView = (props: Question4ScreenViewProps) => {
     <SafeAreaView style={GlobleStyles.appContainer}>
       <StatusBar />
       <CustomNavigationButtons />
-      <Text style={Question4ScreenStyle.checkBoxText}>{question.title} </Text>
-      {/* <DragDrop /> */}
+      <Text style={Question4ScreenStyle.questionText}>{question.title} </Text>
       <DragAndDrop
         style={Question4ScreenStyle.container}
         contentContainerStyle={Question4ScreenStyle.contentContainerStyle}
@@ -56,10 +54,10 @@ const Question4ScreenView = (props: Question4ScreenViewProps) => {
         maxItemsPerZone={1}
         itemsContainerStyle={Question4ScreenStyle.itemsContainerStyle}
         zonesContainerStyle={Question4ScreenStyle.zonesContainerStyle}
-        onMaj={(answerZones:any, options: any) => {
+        onMaj={(answerZones: any, options: any) => {
           setOptions(options);
           setAnswerZones(answerZones);
-          handleAnswerChange();
+          // handleAnswerChange();
         }}
         itemsInZoneStyle={Question4ScreenStyle.itemsInZoneStyle}
         renderZone={(zone, children, hover) => {
@@ -84,12 +82,10 @@ const Question4ScreenView = (props: Question4ScreenViewProps) => {
               </Text>
             </View>
           );
-        }}        
+        }}
       />
-      {/* <Button title='Submit Answer' onPress={ submitAnswer } /> */}
       <CustomButton
         title='SUBMIT ANSWER'
-        // color={AppColor.buttonColor}
         style={Question4ScreenStyle.customButton}
         onPress={submitAnswer}
       />
@@ -98,5 +94,3 @@ const Question4ScreenView = (props: Question4ScreenViewProps) => {
 };
 
 export default Question4ScreenView;
-
-const styles = StyleSheet.create({});

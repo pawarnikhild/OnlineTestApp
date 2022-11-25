@@ -9,26 +9,16 @@ export default StyleSheet.create({
         color: AppColor.black
     },
     customTextInput: {
-        // height: 50,
         marginVertical: 8,
-        fontSize: FontSize.small,
-
     },
     radioButtonView: {
-        // flexDirection: 'row',
-        // alignItems: 'center',
-        // justifyContent: 'center',
-        width: '40%',
-        marginBottom: 40,
-        // height: 200
+        marginBottom: 20,
     },
-    radioButtonText: {
+    normalText: {
         fontSize: FontSize.small,
         color: AppColor.black
     },
     customButton: {
         padding: 8,
     }
-
-    
 });

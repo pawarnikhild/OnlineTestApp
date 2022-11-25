@@ -3,8 +3,6 @@ import { View, Text } from 'react-native'
 import { store } from './app/reduxToolKit/store'
 import { Provider } from 'react-redux/'
 
-import MainStackNavigation from './app/routes/MainStackNavigation'
-import TabNavigation from './app/routes/TabNavigation'
 import Question1Screen from './app/models/Question1Screen'
 import Question2Screen from './app/models/Question2Screen'
 import Question3Screen from './app/models/Question3Screen'

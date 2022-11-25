@@ -1,7 +1,7 @@
 import React from 'react'
 import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import PieChart from 'react-native-pie-chart';
-// import Pie from 'react-native-pie'
+// import Pie from 'react-native-pie' // This is working but gives underline for pie
 
 import CustomButton from '../components/CustomButton';
 
@@ -21,7 +21,6 @@ const ResultScreenView = (props: ResultScreenViewProps ) => {
     <SafeAreaView style={GlobleStyles.appContainer}>
       <StatusBar/>
       <Text style={ResultScreenStyle.heading}>Here is your result</Text>
-
       <PieChart
         widthAndHeight={250}
         series={[result.marksScored, result.marksLost]}
@@ -32,16 +31,15 @@ const ResultScreenView = (props: ResultScreenViewProps ) => {
         coverFill={'#FFF'}
         style={ResultScreenStyle.pieChart}
       />
-      {/* <View style={ResultScreenStyle.pie}>
+      {/* <View style={ResultScreenStyle.pieChart}>
         <Pie
           radius={120}
           innerRadius={50}
           sections={sections}
           dividerSize={2}
           strokeCap={'butt'}
-          style={ResultScreenStyle.pieChart}
         />
-      </View> */}      
+      </View>       */}
       <Text style={ResultScreenStyle.text}>Marks scored: {result.marksScored}</Text>
       <Text style={ResultScreenStyle.text}>Marks lost: {result.marksLost}</Text>
       <Text style={ResultScreenStyle.text}>Total marks: {result.totalMarks} </Text>
@@ -49,7 +47,6 @@ const ResultScreenView = (props: ResultScreenViewProps ) => {
         title='GO TO LOGIN SCREEN'
         style={ResultScreenStyle.customButton}
         onPress={navigateToLoginScreen}
-      
       />
     </SafeAreaView>
   )

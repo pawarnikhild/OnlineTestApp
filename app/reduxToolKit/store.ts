@@ -9,7 +9,6 @@ export const store = configureStore({
         user: userReducer,
         question: questionReducer,
         result: resultReducer
-
     }
 });
 

@@ -12,18 +12,4 @@ export default StyleSheet.create({
         fontSize: FontSize.medium,
         color: AppColor.black,
     },
-    customTextInput: {
-        height: 50,
-        marginVertical: 8,
-        fontSize: FontSize.small,
-    },
-    checkBoxView: {
-        flexDirection: 'row',
-        margin: 8
-    },
-    checkBoxText: {
-        // textAlign: 'justify',
-        color: AppColor.black,
-        fontSize: FontSize.small
-    }
 });

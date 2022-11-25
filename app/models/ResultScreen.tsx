@@ -8,8 +8,7 @@ import ResultScreenView from '../views/ResultScreenView';
 import { AppColor } from '../utils/StyleConstant';
 
 const ResultScreen = () => {
-  const navigation =
-    useNavigation<StackNavigationProp<StackNavigationParamList, 'Login'>>();
+  const navigation = useNavigation<StackNavigationProp<StackNavigationParamList, 'Login'>>();
   const result = useAppSelector(state => state.result);
   const sections = [
     {

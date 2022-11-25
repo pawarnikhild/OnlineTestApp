@@ -1,10 +1,19 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import Pie from 'react-native-pie';
+import {PieChart} from 'react-minimal-pie-chart'; // This is not working
 
 export default () => {
   return (
     <View style={styles.container}>
+      <PieChart
+        data={[
+          {title: 'One', value: 10, color: '#E38627'},
+          {title: 'Two', value: 15, color: '#C13C37'},
+          {title: 'Three', value: 20, color: '#6A2135'},
+        ]}
+      />
+      ;
       {/* <View
             style={{
               paddingVertical: 15,
