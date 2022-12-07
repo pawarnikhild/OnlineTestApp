@@ -16,6 +16,7 @@ import Radio from './app/experiment/Radio'
 import Pie from './app/experiment/Pie'
 import ObjectStateChange from './app/experiment/ObjectStateChange'
 import MiniPie from './app/experiment/MiniPie'
+import IChecBox from './app/experiment/IChecBox'
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
       {/* <Pie /> */}
       {/* <ObjectStateChange /> */}
       {/* <MiniPie /> */}
+      {/* <IChecBox /> */}
     </Provider>
     
   )

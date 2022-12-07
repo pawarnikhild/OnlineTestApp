@@ -148,7 +148,7 @@ export const data = [
           id: 4,
           title: '5. Which of the following animals are found in india.',
           options: ['Zebra', 'Rhinoceros', 'Lion', 'Kangaroo'],
-          answer: [false, true, true, false],
+          answer: ['Rhinoceros', 'Lion'],
           answered: false,
           answerGiven: []
         },
