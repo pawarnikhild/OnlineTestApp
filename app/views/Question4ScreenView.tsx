@@ -1,5 +1,9 @@
+// -------------------------------------------------------------------------------------
+// 1) With the help of a button -
+// -------------------------------------------------------------------------------------
+
 import React from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StatusBar, Text, View } from 'react-native';
 import DragAndDrop from 'volkeno-react-native-drag-drop';
 
 import CustomNavigationButtons from '../components/CustomNavigationButtons';
@@ -95,11 +99,13 @@ const Question4ScreenView = (props: Question4ScreenViewProps) => {
 export default Question4ScreenView;
 
 
-// ---------------------------------------------------------------------------------------
 
+// -------------------------------------------------------------------------------------
+// 2) With the help of useEffect hook -
+// -------------------------------------------------------------------------------------
 
 // import React from 'react';
-// import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+// import { SafeAreaView, StatusBar, Text, View } from 'react-native';
 // import DragAndDrop from 'volkeno-react-native-drag-drop';
 
 // import CustomNavigationButtons from '../components/CustomNavigationButtons';
@@ -122,7 +128,7 @@ export default Question4ScreenView;
 //   selectedAnswer: string,
 //   setOptions: (active: []) => void
 //   setAnswerZones: (active: []) => void
-//   handleAnswerChange: () => void
+//   printAnswerChange: () => void
 //   submitAnswer: () => void
 // }
 
@@ -131,11 +137,9 @@ export default Question4ScreenView;
 //     question,
 //     options,
 //     answerZones,
-//     selectedAnswer,
 //     setOptions,
 //     setAnswerZones,
-//     handleAnswerChange,
-//     submitAnswer
+//     printAnswerChange,
 //   } = props;
 
 //   return (
@@ -156,7 +160,10 @@ export default Question4ScreenView;
 //         onMaj={(answerZones: any, options: any) => {
 //           setOptions(options);
 //           setAnswerZones(answerZones);
-//           // handleAnswerChange();
+//           // printAnswerChange(); // This function is here to see immediate result of state change
+//           // which is sometimes late due asynchonous nature of setState functions hence it can
+//           // create mess.
+//           // If this function is performed in model screen(globally) then it always gived right result.
 //         }}
 //         itemsInZoneStyle={Question4ScreenStyle.itemsInZoneStyle}
 //         renderZone={(zone, children, hover) => {
@@ -182,11 +189,6 @@ export default Question4ScreenView;
 //             </View>
 //           );
 //         }}
-//       />
-//       <CustomButton
-//         title='SUBMIT ANSWER'
-//         style={Question4ScreenStyle.customButton}
-//         onPress={submitAnswer}
 //       />
 //     </SafeAreaView>
 //   );
