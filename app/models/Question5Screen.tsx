@@ -58,7 +58,15 @@ const Question5Screen = () => {
     } else return false;
   };
 
-  const [checkBoxState, setCheckBoxState] = useState([
+  type checkBoxStateType = 
+    {
+      id: number,
+      // value: boolean | (active: number) => boolean,
+      value: boolean | undefined,
+      label: string
+  } [];
+
+  const [checkBoxState, setCheckBoxState] = useState<checkBoxStateType>([
     {
       id: 0,
       value: setOrMaintainState(0),
@@ -181,7 +189,7 @@ export default Question5Screen;
 //       // value: boolean | (active: number) => boolean,
 //       value: boolean | undefined,
 //       label: string
-//   } []
+//   } [];
 
 //   const [checkBoxState, setCheckBoxState] = useState<checkBoxStateType>([
 //     {

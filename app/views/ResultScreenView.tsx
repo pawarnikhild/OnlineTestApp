@@ -1,7 +1,6 @@
 import React from 'react'
 import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import PieChart from 'react-native-pie-chart';
-// import Pie from 'react-native-pie' // This is working but gives underline for pie
 
 import CustomButton from '../components/CustomButton';
 
@@ -24,22 +23,12 @@ const ResultScreenView = (props: ResultScreenViewProps ) => {
       <PieChart
         widthAndHeight={250}
         series={[result.marksScored, result.marksLost]}
-        // series={[100, 100]}
         sliceColor={[AppColor.pieGreen, AppColor.pieRed]}
         doughnut={true}
         coverRadius={0.45}
         coverFill={'#FFF'}
         style={ResultScreenStyle.pieChart}
       />
-      {/* <View style={ResultScreenStyle.pieChart}>
-        <Pie
-          radius={120}
-          innerRadius={50}
-          sections={sections}
-          dividerSize={2}
-          strokeCap={'butt'}
-        />
-      </View>       */}
       <Text style={ResultScreenStyle.text}>Marks scored: {result.marksScored}</Text>
       <Text style={ResultScreenStyle.text}>Marks lost: {result.marksLost}</Text>
       <Text style={ResultScreenStyle.text}>Total marks: {result.totalMarks} </Text>
@@ -53,5 +42,3 @@ const ResultScreenView = (props: ResultScreenViewProps ) => {
 }
 
 export default ResultScreenView
-
-const styles = StyleSheet.create({})

@@ -43,5 +43,3 @@ const Question3ScreenView = (props: Question3ScreenViewProps) => {
 }
 
 export default Question3ScreenView
-
-const styles = StyleSheet.create({})

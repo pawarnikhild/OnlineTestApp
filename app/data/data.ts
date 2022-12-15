@@ -46,7 +46,7 @@ export const data = [
           id: 4,
           title: '५. खालीलपैकी कोणते प्राणी भारतात आढळतात?',
           options: ['झेब्रा', 'गेंडा', 'सिंह', 'कांगारू'],
-          answer: [false, true, true, false],
+          answer: ['गेंडा', 'सिंह'],
           answered: false,
           answerGiven: []
         },
@@ -89,7 +89,7 @@ export const data = [
           title:
             '४. राष्ट्रों के अनुसार राष्ट्रीय पशु का मिलान करें\n 1) भारत\n2) अमेरिका के संयुक्त राज्य\n3) पाकिस्तान\n4) नेपाल',
           options: ['मार्खोर', 'गाय', 'बाघ', 'अमेरिकी भैंसा'],
-          answer: ['बाघ', 'अमेरिकन भैंसा', 'मार्खोर', 'गाय'],
+          answer: ['बाघ', 'अमेरिकी भैंसा', 'मार्खोर', 'गाय'],
           answered: false,
           answerGiven: []
         },
@@ -97,7 +97,7 @@ export const data = [
           id: 4,
           title: '५. निम्नलिखित में से कौन से जानवर भारत में पाए जाते हैं?.',
           options: ['ज़ीब्रा', 'गैंडा', 'शेर', 'कंगारू' ],
-          answer: [false, true, true, false],
+          answer: ['गैंडा', 'शेर'],
           answered: false,
           answerGiven: []
         },
